@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="MyApplication">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="container-fluid" data-ng-controller="HomeController">
+        <h1>SSI Computer Education - Employees</h1>
+     
+
+        <table class="table table-hover">
+            <thead class="warning">
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                    <th>Age</th>
+                    <th>Designation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="emp in employees">
+                    <td data-ng-bind="emp.firstName | uppercase"></td>
+                    <td data-ng-bind="emp.gender | lowercase"></td>
+                    <td data-ng-bind="emp.salary | currency"></td>
+                    <td data-ng-bind="emp.age"></td>
+                    <td data-ng-bind="emp.designation"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+   
+
+
+
+    <script src="../bootstrap.js"></script>
+    
+    <script src="../angular.min.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+</html>

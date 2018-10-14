@@ -1,0 +1,11 @@
+.required {
+    color : #631616;
+}
+.form-bg{
+    background-color:#164A16;
+    width: 500px;
+    margin: 0 auto;
+   
+    padding: 10px;
+    margin-top: 50px;
+}

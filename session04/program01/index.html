@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body data-ng-controller="MyController">
+    
+    <h1 data-ng-bind-html="text"></h1>
+    <div data-ng-bind-html="content"></div>
+    <div data-ng-include="'temp.html'"></div>
+    {{firstName|uppercase}}
+   
+
+    
+
+    <script src="../bootstrap.js"></script>
+    <script src="../angular.min.js"></script>
+    <script src="./module.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

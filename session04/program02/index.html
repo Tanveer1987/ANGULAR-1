@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body data-ng-controller="MyController">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form action="" name="contactForm">
+                    <div class="form-group" data-ng-class="{'has-error': !contactForm.name.$pristine && contactForm.name.$invalid, 'has-success':contactForm.name.$valid}">
+                        <label class="control-label" for="name">Name *</label>
+                        <input id="name" name="name" type="text" class="form-control" autocomplete="off" placeholder="Name" data-ng-model="contact.name" data-ng-required="true" data-ng-minlength="3"/>
+                        <div class="required" data-ng-show="!contactForm.name.$pristine">
+                            <span data-ng-show="contactForm.name.$error.required">Name is required</span>
+                            <span data-ng-show="contactForm.name.$error.minlength">Name must be minimum 3 letters</span>
+                        </div>
+                    </div>
+                  
+
+                    
+
+                    <input type="submit" value="Submit" class="btn btn-primary" data-ng-disabled="contactForm.$invalid" />
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="../angular.min.js"></script>
+    <script src="./module.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

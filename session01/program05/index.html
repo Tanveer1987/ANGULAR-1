@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApplication">
+<head>
+    <title>Document</title>
+</head>
+<body ng-controller="MainController">
+    
+   Title <p ng-bind="title"></p>
+    Devices <p ng-bind="devices"></p>
+    Newspaper <p ng-bind="newspaper"></p>
+    Password <p ng-bind="password"></p>
+    Gender <p ng-bind="gender"></p>
+    Address <p ng-bind="address"></p>
+    Country <p ng-bind="country"></p>
+    DOB <p ng-bind="dob"></p>
+
+    <hr/>
+    
+
+    <input type="text" ng-model="title">
+    <input type="password" ng-model="password">
+
+    <input  type="checkbox" 
+            ng-true-value="'mobile'" 
+            ng-false-value="'not mobile'" 
+            ng-model="devices"/> Mobile
+    <input  type="checkbox"
+            ng-model="newspaper"/> The Hindu
+    
+
+    <input  type="radio"
+            ng-model="gender"
+             value="male"/> Male
+    
+    <input  type="radio"
+            ng-model="gender"
+            value="female"/> Female
+
+    <textarea ng-model="address"></textarea>
+
+    Country
+    <select ng-model="country"> 
+        <option value="1">India</option>
+        <option value="2">America</option>
+        <option value="3">Japan</option>
+        <option value="4">Taiwan</option>
+    </select>
+
+
+    <input type="date" ng-model="dob"/>
+    
+
+
+
+
+    <script src="../angular.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

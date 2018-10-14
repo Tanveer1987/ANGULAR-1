@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet"
+     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body data-ng-controller="MyController">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form action="" name="contactForm" class="form-bg">
+                    <div class="form-group" 
+                    data-ng-class="{'has-error': !contactForm.name.$pristine
+                     && contactForm.name.$invalid, 'has-success':contactForm.name.$valid}">
+                        <label class="control-label" for="name">Name *</label>
+                        <input id="name" name="name" type="text" class="form-control"
+                        autocomplete="off" placeholder="Name" 
+                        data-ng-model="contactinfo.name"
+                            data-ng-required="true" data-ng-minlength="3"/>
+                        <div class="required" data-ng-show="!contactForm.name.$pristine">
+                            <span data-ng-show="contactForm.name.$error.required">
+                                Name is required</span>
+                            <span data-ng-show="contactForm.name.$error.minlength">
+                                Name must be minimum 3 letters</span>
+                        </div>
+                    </div>
+                    <div class="form-group" 
+                    data-ng-class="{'has-error': !contactForm.group.$pristine
+                     && contactForm.group.$invalid, 'has-success':contactForm.group.$valid}">
+
+                        <label for=""></label>
+                        <input type="radio" name="group"/> Work<br>
+                        <input type="radio" name="group"/> Family<br>
+                        <input type="radio" name="group"/> Friend<br>
+                        <input type="radio" name="group"/> relative <br> </div>
+                     <div class="form-group" 
+                        data-ng-class="{'has-error': !contactForm.mobile.$pristine
+                         && contactForm.mobile.$invalid, 
+                         'has-success':contactForm.mobile.$valid}">
+    
+                            <label class="control-label" for="mobile">Mobile *</label>
+                        <input type="text" id="mobile" name="mobile" 
+                        class="form-control" ng-required="true"
+                         data-ng-model="contactinfo.mobile"
+                        ng-pattern='/^\+?\d{10}$/'/><br/>
+                        <div class="required" 
+                        data-ng-if="!contactForm.mobile.$error.required 
+                        && contactForm.mobile.$dirty">
+                        <span data-ng-show="contactForm.mobile.$error.required">
+                            Mobile number </span>
+                                <span data-ng-show="contactForm.mobile.$error.pattern">
+                                    Mobile number enter 10 digit number</span>
+                                  
+
+                        </div>
+                    </div>
+                    {{contactForm.mobile}}  
+                    <div class="form-group" 
+                    data-ng-class="{'has-error': !contactForm.group.$pristine
+                     && contactForm.group.$invalid, 'has-success':contactForm.group.$valid}">
+                            <label class="control-label" for="email">Email</label>
+                            <input type="email" id="email" class="form-control"/><br/>
+                        </div>
+                            <div>
+                                Address:<textarea> </textarea>
+                            </div>
+                    <div>
+                        <select name="storepath"> Storage
+                            <option> Sim1</option>
+                            <option> Sim2</option>
+                            <option> gmail</option>
+                        </select>
+                    </div>
+
+
+
+
+                    <input type="submit" value="Submit" class="btn btn-primary" data-ng-disabled="contactForm.$invalid" />
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="../angular.min.js"></script>
+    <script src="./module.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

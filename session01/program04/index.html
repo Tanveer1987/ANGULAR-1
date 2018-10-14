@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApplication">
+<head>
+    <title>Document</title>
+</head>
+<body ng-controller="MainController">
+    <h2> {{course}} </h2>
+    <p> {{ technologies[0] }} , {{ technologies[1] }} </p>
+    <p> {{ student.name }}, {{ student['gender'] }} </p>
+    <p> {{ student.marks[0] }} </p>
+    <p> {{ student.contact.email }} </p>
+    <p> {{ employees[2].name }} </p>
+
+
+    <script src="../angular.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
