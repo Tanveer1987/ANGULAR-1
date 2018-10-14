@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="../lib/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./main.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body ng-controller="MainCtrl">
+    
+ 
+    <table class="table">
+        <tr>
+                <th> Name </th>
+                <th> Salary </th>
+                <th> Location </th>
+        </tr>
+        <tr ng-repeat="emp in employees" 
+            ng-class="{highlight:applyStyle}" 
+            ng-mouseenter="applyStyle=true" 
+            ng-mouseleave="applyStyle=false">
+                <td> {{emp.name}} </td>
+                <td> {{emp.salary}} </td>
+                <td> {{emp.location}} </td>
+        </tr>
+
+    </table>
+
+
+
+
+
+
+
+
+
+    <script src="../lib/js/angular.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

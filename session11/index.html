@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+   <title>Document</title>
+</head>
+<body ng-controller="MainController">
+    
+  <form name="dummyForm">
+    <input type="text" ng-model="firstName" name="firstName" ng-required="true" ng-minlength="3"/>
+    <div ng-show="dummyForm.firstName.$dirty && dummyForm.firstName.$error.required">
+        First Name is required
+    </div>
+    <div ng-show="dummyForm.firstName.$dirty && dummyForm.firstName.$error.minlength">
+        Minimum 3 letter is required
+    </div>
+
+    <input type="text" ng-model="lastName" name="lastName" ng-required="true" />
+    <div ng-show="dummyForm.lastName.$dirty && dummyForm.lastName.$error.required">
+       Last Name is required
+    </div>
+     
+
+    <input type="button" ng-click="onClick()" value="Submit" ng-disabled="dummyForm.$invalid"/>
+  </form>
+
+
+
+     
+    <script src="lib/js/angular.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
