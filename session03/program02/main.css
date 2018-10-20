@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .warning {
     background-color: #EDE885;
 }
@@ -5,3 +6,10 @@
 .cursorPointer {
     cursor : pointer;
 }
+=======
+ span {
+     display : block;
+     font-size: 2em;   
+     font-weight: bold;  
+ }
+>>>>>>> 718c5faec1b71da01a9ae82d40b69f247c1e5b21

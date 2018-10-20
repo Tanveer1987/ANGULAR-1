@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 angular.module("MyApp").controller('MyController', function($scope, $timeout, $location, $sce, $interval, $log, $filter) {
 
     $log.log("Location ", $location);
@@ -27,3 +28,21 @@ angular.module("MyApp").controller('MyController', function($scope, $timeout, $l
      }, 1000);
 
 });
+=======
+
+// Creating a module
+angular.module("MyApplication", []);
+
+
+angular
+    .module("MyApplication")
+    .controller("HomeController", function($scope) {
+
+            $scope.name = "Sachin";
+
+    });
+
+
+
+
+>>>>>>> 718c5faec1b71da01a9ae82d40b69f247c1e5b21

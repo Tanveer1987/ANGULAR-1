@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <title>Document</title>
+    <script src="../lib/angular.min.js"></script>
+</head>
+<body ng-init="technologies=['Angular JS', 'Javascript', 'Bootstrap', 'NodeJS', 'ReactJS']">
+    <ul>
+        <li ng-repeat="technology in technologies"> {{ technology }} </li>
+    </ul>
+</body>
+</html>

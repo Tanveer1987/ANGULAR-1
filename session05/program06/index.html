@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyModule">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+
+
+</head>
+<body ng-controller="MainController">
+    
+    <div class="container">
+
+        <div class="page-header border-green">
+            <h1>SSI Computer Education</h1>
+        </div>
+
+        <div class="jumbotron">
+            <h1>Campus Selections Drive</h1>
+            <p>Conducted by <strong>SSI Computer Education, Annanagar </strong></p>
+        </div>
+
+
+
+        <div class="alert alert-success alert-dismissible fade in border-green" ng-repeat="job in jobs">
+            <h4>{{job.title}}</h4>
+            <span class="text-right">{{job.experience}}</span>
+            <a href="http://www.naukri.com" class="btn btn-success"> Apply </a>
+            <a href="#" data-dismiss="alert"  class="close">&times;</a>
+        </div>
+
+        
+
+
+      
+   </div>
+    
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="../lib/js/angular.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

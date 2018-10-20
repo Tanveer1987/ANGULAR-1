@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <title>Document</title>
+    <script src="../lib/angular.min.js"></script>
+</head>
+<body ng-init="stu1 = { name : 'Sachin', age  : 22, marks: [33,66,77,99,55], city : 'Chennai' }">
+  
+    Name : {{ stu1.name }} <br/>
+    Age : {{ stu1.age }} <br/>
+    City : {{ stu1.city }} <br/>
+    Marks : 
+    <ul>
+        <li ng-repeat="mark in stu1.marks"> {{ mark }} </li>
+    </ul>
+</body>
+</html>

@@ -1,10 +1,15 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en" data-ng-app="MyApp">
+=======
+<html lang="en" ng-app="MyApp">
+>>>>>>> 718c5faec1b71da01a9ae82d40b69f247c1e5b21
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -69,5 +74,36 @@
     <script src="./template/about/about.js"></script>
     <script src="./template/home/home.js"></script>
     <script src="./template/friends/friends.js"></script>
+=======
+
+    <link href="../lib/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body ng-controller="MainCtrl">
+     
+   <div>
+    Enter the first Name : 
+    <input type="text" ng-model="firstName">
+   </div>
+
+   <div>
+      Enter the last Name : 
+      <input type="text" ng-model="lastName">
+    </div>
+  
+
+    <div>
+        <button ng-click="makeFullName()">Click</button>
+    </div>
+  
+    <div>
+       <b> {{fullName}} </b>
+    </div>
+
+     
+    <script src="../lib/js/angular.js"></script>
+    <script src="./main.js"></script>
+>>>>>>> 718c5faec1b71da01a9ae82d40b69f247c1e5b21
 </body>
 </html>
